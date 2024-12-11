@@ -15,7 +15,7 @@ metadata:
     jenkins.io/job-full-name: benwilcock-org/springboot-maven
 spec:
   type: api
-  system: system:default/parasol
+  system: system:default/red-hat-developer-hub
   lifecycle: production
   owner: user:default/benwilcock
 

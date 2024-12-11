@@ -1,0 +1,11 @@
+site_name: springboot-maven
+site_description: Contains the techdocs for springboot-maven
+repo_url: https://github.com/benwilcock-org/springboot-maven
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# Note for content editors, edit only the section below
+nav:
+  - springboot-maven Documentation: index.md
