@@ -3,12 +3,39 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: springboot-maven
+  description: A simple Spring Boot application built with Maven which started life as a template.
+  tags:
+    - java
+    - spring
+    - web
   annotations:
     backstage.io/kubernetes-id: springboot-maven
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: benwilcock-org/springboot-maven
+    jenkins.io/job-full-name: benwilcock-org/springboot-maven
 spec:
   type: api
   system: system:default/parasol
   lifecycle: production
   owner: user:default/benwilcock
+
+
+# This component is already included in the 'Polyglot Demo' system here: https://github.com/benwilcock/backstage-catalogs/blob/main/system-polyglot-demo.yml
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: springboot-maven
+  description: Spring Boot With Maven
+  tags:
+    - java
+    - spring
+    - web
+    - tanzu
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=springboot-maven'
+    'jenkins.io/job-full-name': springboot-maven
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
